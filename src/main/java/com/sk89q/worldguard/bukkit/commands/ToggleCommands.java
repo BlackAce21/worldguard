@@ -120,7 +120,7 @@ public class ToggleCommands {
                 int removed = 0;
 
                 for (Entity entity : world.getEntities()) {
-                    if (BukkitUtil.isIntensiveEntity(entity) && !entity.getName().contains("Golem")) {
+                    if (BukkitUtil.isIntensiveEntity(entity) && !entity.getClass().getName().contains("Golem")) {
                         entity.remove();
                         removed++;
                     }
